@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 
 import com.awesomethings.beforeafterslider.R;
+import com.awesomethings.beforeafterslider.asycn.ImageLoaderAsyncTask;
 import com.bumptech.glide.Glide;
 
 /**
@@ -21,7 +22,6 @@ import com.bumptech.glide.Glide;
 
 public class BeforeAfterImageView extends PercentRelativeLayout {
 
-    private ClipDrawable clipDrawable;
     private ImageView beforeImageView;
     private ImageView afterImageView;
     private SeekBar seekBar;
@@ -46,16 +46,13 @@ public class BeforeAfterImageView extends PercentRelativeLayout {
 
     private void initViews(Context context){
         View customView = LayoutInflater.from(context).inflate(R.layout.before_after_image_view, this);
+        this.context = context;
         beforeImageView = (ImageView) customView.findViewById(R.id.before_image_view_id);
         afterImageView = (ImageView) customView.findViewById(R.id.after_image_view_id);
         seekBar = (SeekBar) customView.findViewById(R.id.seekbar_id);
     }
 
 
-    public BeforeAfterImageView build(Context context) {
-        this.context = context;
-        return this;
-    }
 
     public BeforeAfterImageView setBeforeImageView(String imageUri){
         Glide.with(context)
@@ -66,10 +63,9 @@ public class BeforeAfterImageView extends PercentRelativeLayout {
     }
 
     public void setAfterImageView(String imageUri){
-        Glide.with(context)
-                .load(imageUri)
-                .into(afterImageView);
+        new ImageLoaderAsyncTask(afterImageView,seekBar,context).execute(imageUri);
     }
+
 
 
 
