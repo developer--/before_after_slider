@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.percent.PercentRelativeLayout
+        app:layout_aspectRatio="178%"
+        app:layout_widthPercent="100%"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:id="@+id/before_image_view_id"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <ImageView
+            android:id="@+id/after_image_view_id"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+        <SeekBar
+            android:id="@+id/seekbar_id"
+            android:max="10000"
+            android:progress="5000"
+            app:layout_marginTopPercent="50%"
+            android:thumb="@mipmap/white_circle"
+            android:progressDrawable="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>
