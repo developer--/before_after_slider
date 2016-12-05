@@ -11,14 +11,21 @@
   <com.awesomethings.beforeafterslider.Slider
         android:id="@+id/mySlider"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="300dp"
+        app:slider_thumb="@mipmap/white_circle"
+        >
   </com.awesomethings.beforeafterslider.Slider>
 ```
 
 ```kotlin
   //Inside java
   
-  mySlider.setBeforeImage(imgUrl1).setAfterImage(imgUrl2)
+  mySlider.setBeforeImage(imgUrl1).setAfterImage(imgUrl2)  
+```
+
+```kotlin
+  to change slider_thumb programmaticaly
+  mySlider.setSliderThumb(yourDrawable)
 ```
 
 <h1>Maven dependency</h1>
