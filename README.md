@@ -6,7 +6,7 @@
 <h1> instructions </h1>
 
 ```xml
-<!-- Into your xml layout -->
+<!-- Inside your xml layout -->
 
   <com.awesomethings.beforeafterslider.Slider
         android:id="@+id/mySlider"
