@@ -10,8 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val imgUrl1 = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQh_U6ZLeHau3T6-LL9uGQHMoI7TI8PS3-I0cEO5J-EGrgUZNBh"
-        val imgUrl2 = "http://www.cs.stir.ac.uk/~kjt/sailing/lasc/image/wallpaper/club-house-16-9.jpg"
+        val imgUrl1 = "http://storage.googleapis.com/ix_choosemuse/uploads/2016/02/android-logo.png"
+        val imgUrl2 = "http://www.heise.de/imgs/18/1/4/5/4/0/3/1/kotlin-746417a7cc2556af.jpeg"
 
         before_after_slider_id.setBeforeImage(imgUrl1).setAfterImage(imgUrl2)
     }

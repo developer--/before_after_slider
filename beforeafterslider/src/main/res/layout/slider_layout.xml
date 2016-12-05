@@ -25,6 +25,6 @@
         android:max="10000"
         android:progress="5000"
         android:progressDrawable="@android:color/transparent"
-        android:thumb="@mipmap/white_circle" />
+        android:thumb="@null" />
 
 </RelativeLayout>
