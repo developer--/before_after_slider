@@ -1,4 +1,4 @@
-# <h1 align="center">Before and after slider</h1>
+# <h1 align="center">Before and after image slider</h1>
 <p align="center">
   <img src="before-after-slider.gif"/>
 </p>
