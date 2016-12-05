@@ -5,18 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="com.awesomethings.beforeafterslider.MainActivity">
+    tools:context="com.awesomekotlin.beforeafterslider.MainActivity">
 
 
-    <com.awesomethings.beforeafterslider.custom.BeforeAfterImageView
+    <com.awesomethings.beforeafterslider.Slider
         android:id="@+id/before_after_slider_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </com.awesomethings.beforeafterslider.custom.BeforeAfterImageView>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="300dp" />
+    </com.awesomethings.beforeafterslider.Slider>
 
 </LinearLayout>
