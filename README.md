@@ -38,11 +38,7 @@
 </dependency>
 ```
 <h1>Gradle dependency</h1>
-```groovy
-  maven {
-     url  "https://dl.bintray.com/kandroid/maven/"
-  }  
-```
+
 ```groovy        
   compile 'com.awesomethings.beforeafterslider:beforeafterslider:1.0.2'
 ```
