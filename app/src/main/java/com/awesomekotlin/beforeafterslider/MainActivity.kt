@@ -10,11 +10,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val img1 = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQh_U6ZLeHau3T6-LL9uGQHMoI7TI8PS3-I0cEO5J-EGrgUZNBh"
-        val img2 = "http://www.cs.stir.ac.uk/~kjt/sailing/lasc/image/wallpaper/club-house-16-9.jpg"
+        val imgUrl1 = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQh_U6ZLeHau3T6-LL9uGQHMoI7TI8PS3-I0cEO5J-EGrgUZNBh"
+        val imgUrl2 = "http://www.cs.stir.ac.uk/~kjt/sailing/lasc/image/wallpaper/club-house-16-9.jpg"
 
-        before_after_slider_id
-                .setBeforeImage(img1)
-                .setAfterImage(img2)
+        before_after_slider_id.setBeforeImage(imgUrl1).setAfterImage(imgUrl2)
     }
 }

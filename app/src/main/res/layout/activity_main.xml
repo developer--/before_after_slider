@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.awesomekotlin.beforeafterslider.MainActivity">
 
@@ -11,7 +11,7 @@
     <com.awesomethings.beforeafterslider.Slider
         android:id="@+id/before_after_slider_id"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="300dp">
 
     </com.awesomethings.beforeafterslider.Slider>
 
