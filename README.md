@@ -24,7 +24,7 @@
 ```
 
 ```kotlin
-  to change slider_thumb programmaticaly
+  //to change slider_thumb programmaticaly
   mySlider.setSliderThumb(yourDrawable)
 ```
 
