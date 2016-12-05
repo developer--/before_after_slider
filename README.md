@@ -20,3 +20,17 @@
   
   mySlider.setBeforeImage(imgUrl1).setAfterImage(imgUrl2)
 ```
+
+<h1>Maven dependency</h1>
+```groovy
+<dependency>
+  <groupId>com.awesomethings.beforeafterslider</groupId>
+  <artifactId>beforeafterslider</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
+```
+<h1>Gradle dependency</h1>
+```
+compile 'com.awesomethings.beforeafterslider:beforeafterslider:1.0.0'
+```
