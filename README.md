@@ -1,3 +1,6 @@
 # before_after_slider
-before after slider
-http://imgur.com/AHLwnHA
+Before after slider demo
+
+<p align="center">
+  <img src="before-after-slider.gif"/>
+</p>
