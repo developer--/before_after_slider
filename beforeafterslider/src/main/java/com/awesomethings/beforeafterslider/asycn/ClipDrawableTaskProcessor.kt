@@ -14,6 +14,10 @@ import com.bumptech.glide.Glide
 
 import java.lang.ref.WeakReference
 
+/**
+ * Created by Jemo on 12/5/16.
+ */
+
 class ClipDrawableTaskProcessor(imageView: ImageView, seekBar: SeekBar, private val context: Context) : AsyncTask<String, Void, ClipDrawable>() {
     private val imageRef: WeakReference<ImageView>
     private val seekBarRef: WeakReference<SeekBar>
