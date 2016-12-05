@@ -54,8 +54,8 @@ configurations{
     }
 }
 bintray {
-    //user = 'test-user'
-//    key = '01234567890abcdef01234567890abcdef'
+    user = 'kandroid'
+    key = '0a25a117b91f313f5174ce9ef7d97883c5ca0a0b'
     pkg {
         repo = 'maven'
         name = 'com.awesomethings.beforeafterslider'
