@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 25
@@ -24,6 +26,52 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+
+    group = 'com.awesomethings.beforeafterslider' // Change this to match your package name
+    version = '1.0.0' // Change this to match your version number
+
+}
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+task generateJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath()
+            .join(File.pathSeparator))
+}
+
+task generateJavadocsJar(type: Jar) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+
+configurations{
+    artifacts {
+        archives generateJavadocsJar
+        archives generateSourcesJar
+    }
+}
+bintray {
+    //user = 'test-user'
+//    key = '01234567890abcdef01234567890abcdef'
+    pkg {
+        repo = 'maven'
+        name = 'com.awesomethings.beforeafterslider'
+
+        version {
+            name = '1.0.0'
+            desc = 'Before after slider'
+            released  = new Date()
+            vcsTag = '1.0.0'
+        }
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/developer--/before_after_slider.git'
+        websiteUrl = 'https://github.com/developer--/before_after_slider'
+    }
+    configurations = ['archives']
 }
 
 dependencies {
