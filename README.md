@@ -1,4 +1,4 @@
-# before_after_slider
+# Before after slider
 <p align="center">
   <img src="before-after-slider.gif"/>
 </p>
