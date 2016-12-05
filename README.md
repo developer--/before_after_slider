@@ -33,7 +33,7 @@
 <dependency>
   <groupId>com.awesomethings.beforeafterslider</groupId>
   <artifactId>beforeafterslider</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <type>pom</type>
 </dependency>
 ```
@@ -44,5 +44,5 @@
   }  
 ```
 ```groovy        
-  compile 'com.awesomethings.beforeafterslider:beforeafterslider:1.0.1'
+  compile 'com.awesomethings.beforeafterslider:beforeafterslider:1.0.2'
 ```
