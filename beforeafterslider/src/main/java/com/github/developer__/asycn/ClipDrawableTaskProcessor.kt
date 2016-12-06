@@ -1,4 +1,4 @@
-package com.awesomethings.beforeafterslider.asycn
+package com.github.developer__.asycn
 
 import android.content.Context
 import android.graphics.Bitmap

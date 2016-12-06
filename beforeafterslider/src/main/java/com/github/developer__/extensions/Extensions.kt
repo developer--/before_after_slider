@@ -1,4 +1,4 @@
-package com.awesomethings.beforeafterslider.extensions
+package com.github.developer__.extensions
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide

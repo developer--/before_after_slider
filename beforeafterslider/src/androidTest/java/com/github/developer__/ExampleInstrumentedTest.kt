@@ -1,4 +1,4 @@
-package com.awesomethings.beforeafterslider
+package com.github.developer__
 
 import android.content.Context
 import android.support.test.InstrumentationRegistry

@@ -27,7 +27,7 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
-    group = 'com.awesomethings.beforeafterslider'
+    group = 'com.github.developer--'
     version = '1.0.2'
 
 }
@@ -55,10 +55,10 @@ configurations{
 }
 bintray {
     pkg {
-//        user = 'kandroid'
-//        key = '0a25a117b91f313f5174ce9ef7d97883c5ca0a0b'
+        user = 'kandroid'
+        key = '0a25a117b91f313f5174ce9ef7d97883c5ca0a0b'
         repo = 'maven'
-        name = 'com.awesomethings.beforeafterslider'
+        name = 'com.github.developer--'
 
         version {
             name = '1.0.2'

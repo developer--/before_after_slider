@@ -1,12 +1,13 @@
-package com.awesomethings.beforeafterslider
+package com.github.developer__
 
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.RelativeLayout
-import com.awesomethings.beforeafterslider.asycn.ClipDrawableTaskProcessor
-import com.awesomethings.beforeafterslider.extensions.loadImage
+import com.github.developer__.asycn.ClipDrawableTaskProcessor
+import com.github.developer__.extensions.loadImage
+import com.github.developer__.R
 import kotlinx.android.synthetic.main.slider_layout.view.*
 
 /**

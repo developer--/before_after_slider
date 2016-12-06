@@ -1,4 +1,4 @@
-package com.awesomethings.beforeafterslider
+package com.github.developer__
 
 import org.junit.Test
 
