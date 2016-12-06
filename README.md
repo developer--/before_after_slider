@@ -8,13 +8,13 @@
 ```xml
 <!-- Inside your xml layout -->
 
-  <com.awesomethings.beforeafterslider.Slider
+  <com.github.developer__.Slider
         android:id="@+id/mySlider"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        app:slider_thumb="@mipmap/white_circle"
+        app:slider_thumb="@mipmap/white_circle" 
         >
-  </com.awesomethings.beforeafterslider.Slider>
+  </com.github.developer__.Slider>
 ```
 
 ```kotlin
@@ -26,6 +26,12 @@
 ```kotlin
   //to change slider_thumb programmaticaly
   mySlider.setSliderThumb(yourDrawable)
+```
+
+```xml  
+  <!--  to set images from xml  -->
+  app:before_image="@mipmap/image1"
+  app:after_image="@mipmap/image2"
 ```
 
 <h1>Maven dependency</h1>
