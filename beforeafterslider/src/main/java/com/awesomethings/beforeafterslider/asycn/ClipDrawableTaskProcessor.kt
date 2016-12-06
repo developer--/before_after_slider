@@ -19,28 +19,13 @@ import java.lang.ref.WeakReference
  */
 
 class ClipDrawableTaskProcessor(imageView: ImageView, seekBar: SeekBar, private val context: Context) : AsyncTask<String, Void, ClipDrawable>() {
+
     private val imageRef: WeakReference<ImageView>
     private val seekBarRef: WeakReference<SeekBar>
 
     init {
         this.imageRef = WeakReference(imageView)
         this.seekBarRef = WeakReference(seekBar)
-    }
-
-    private fun scaleBitmap(bitmap: Bitmap): Bitmap? {
-        try {
-            if (imageRef.get() == null)
-                return bitmap
-            val imageWidth = imageRef.get().width
-            val imageHeight = imageRef.get().height
-
-            if (imageWidth > 0 && imageHeight > 0)
-                return Bitmap.createScaledBitmap(bitmap, imageWidth, imageHeight, false)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-
-        return null
     }
 
     override fun doInBackground(vararg strings: String): ClipDrawable? {
@@ -52,12 +37,28 @@ class ClipDrawableTaskProcessor(imageView: ImageView, seekBar: SeekBar, private 
                     .asBitmap()
                     .into(-1, -1)
                     .get()
-            val tmpBitmap = scaleBitmap(theBitmap)
+            val tmpBitmap = getScaledBitmap(theBitmap)
             if (tmpBitmap != null)
                 theBitmap = tmpBitmap
 
             val bitmapDrawable = BitmapDrawable(context.resources, theBitmap)
             return ClipDrawable(bitmapDrawable, Gravity.LEFT, ClipDrawable.HORIZONTAL)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        return null
+    }
+
+    private fun getScaledBitmap(bitmap: Bitmap): Bitmap? {
+        try {
+            if (imageRef.get() == null)
+                return bitmap
+            val imageWidth = imageRef.get().width
+            val imageHeight = imageRef.get().height
+
+            if (imageWidth > 0 && imageHeight > 0)
+                return Bitmap.createScaledBitmap(bitmap, imageWidth, imageHeight, false)
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -75,7 +76,6 @@ class ClipDrawableTaskProcessor(imageView: ImageView, seekBar: SeekBar, private 
             }
         }
     }
-
 
     private fun initSeekBar(clipDrawable: ClipDrawable) {
         seekBarRef.get().setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {

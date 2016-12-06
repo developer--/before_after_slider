@@ -13,10 +13,9 @@ import kotlinx.android.synthetic.main.slider_layout.view.*
  * Created by Jemo on 12/5/16.
  */
 
-class Slider : RelativeLayout {
-    
-    constructor(context: Context) : super(context) {
-    }
+class Slider : RelativeLayout{
+
+    constructor(context: Context): super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         val attr = context.theme.obtainStyledAttributes(attrs, R.styleable.Slider,0,0)
@@ -32,17 +31,27 @@ class Slider : RelativeLayout {
         LayoutInflater.from(context).inflate(R.layout.slider_layout, this)
     }
 
+    /**
+     * set original image
+     */
     fun setBeforeImage(imageUri: String): Slider {
         before_image_view_id.loadImage(imageUri)
         return this
     }
 
+    /**
+     * set changed image
+     */
     fun setAfterImage(imageUri: String) {
         ClipDrawableTaskProcessor(after_image_view_id, seekbar_id, context).execute(imageUri)
     }
 
-    
+    /**
+     * set thumb
+     */
     fun setSliderThumb(thumb: Drawable?){
-        seekbar_id.thumb = thumb
+        thumb?.let {
+            seekbar_id.thumb = thumb
+        }
     }
 }
