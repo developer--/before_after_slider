@@ -12,7 +12,9 @@
         android:id="@+id/mySlider"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        app:slider_thumb="@mipmap/white_circle"
+        app:slider_thumb="@mipmap/white_circle" 
+        app:before_image="@mipmap/ic_launcher"
+        app:after_image="@mipmap/white_circle"
         >
   </com.awesomethings.beforeafterslider.Slider>
 ```
