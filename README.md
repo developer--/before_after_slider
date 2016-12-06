@@ -31,7 +31,7 @@
 <h1>Maven dependency</h1>
 ```groovy
 <dependency>
-  <groupId>com.awesomethings.beforeafterslider</groupId>
+  <groupId>com.github.developer--</groupId>
   <artifactId>beforeafterslider</artifactId>
   <version>1.0.2</version>
   <type>pom</type>
@@ -40,5 +40,5 @@
 <h1>Gradle dependency</h1>
 
 ```groovy        
-  compile 'com.awesomethings.beforeafterslider:beforeafterslider:1.0.2'
+  compile 'com.github.developer--:beforeafterslider:1.0.2'
 ```
