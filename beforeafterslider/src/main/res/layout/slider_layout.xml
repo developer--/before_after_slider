@@ -8,19 +8,22 @@
         android:id="@+id/before_image_view_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        />
 
     <ImageView
         android:id="@+id/after_image_view_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        />
 
     <SeekBar
         android:id="@+id/seekbar_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:visibility="gone"
         android:max="10000"
         android:progress="5000"
         android:progressDrawable="@android:color/transparent"

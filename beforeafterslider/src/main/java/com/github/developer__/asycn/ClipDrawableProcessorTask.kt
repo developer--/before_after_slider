@@ -18,8 +18,7 @@ import java.lang.ref.WeakReference
  * Created by Jemo on 12/5/16.
  */
 
-class ClipDrawableTaskProcessor(imageView: ImageView, seekBar: SeekBar, private val context: Context) : AsyncTask<String, Void, ClipDrawable>() {
-
+class ClipDrawableProcessorTask<T>(imageView: ImageView, seekBar: SeekBar, private val context: Context, private val loadedFinishedListener: OnAfterImageLoaded? = null) : AsyncTask<T, Void, ClipDrawable>() {
     private val imageRef: WeakReference<ImageView>
     private val seekBarRef: WeakReference<SeekBar>
 
@@ -28,15 +27,19 @@ class ClipDrawableTaskProcessor(imageView: ImageView, seekBar: SeekBar, private 
         this.seekBarRef = WeakReference(seekBar)
     }
 
-    override fun doInBackground(vararg strings: String): ClipDrawable? {
-        if (Looper.myLooper() == null)
-            Looper.prepare()
+    override fun doInBackground(vararg args: T): ClipDrawable? {
+        Looper.myLooper()?.let { Looper.prepare() }
         try {
-            var theBitmap = Glide.with(context)
-                    .load(strings[0])
-                    .asBitmap()
-                    .into(-1, -1)
-                    .get()
+            var theBitmap : Bitmap
+            if (args[0] is String) {
+                theBitmap = Glide.with(context)
+                        .load(args[0])
+                        .asBitmap()
+                        .into(-1, -1)
+                        .get()
+            } else {
+                theBitmap = (args[0] as BitmapDrawable).bitmap
+            }
             val tmpBitmap = getScaledBitmap(theBitmap)
             if (tmpBitmap != null)
                 theBitmap = tmpBitmap
@@ -73,7 +76,12 @@ class ClipDrawableTaskProcessor(imageView: ImageView, seekBar: SeekBar, private 
                 imageRef.get().setImageDrawable(clipDrawable)
                 val progressNum = 5000
                 clipDrawable.level = progressNum
+                loadedFinishedListener?.onLoadedFinished(true)
+            }else {
+                loadedFinishedListener?.onLoadedFinished(false)
             }
+        }else {
+            loadedFinishedListener?.onLoadedFinished(false)
         }
     }
 
@@ -91,5 +99,9 @@ class ClipDrawableTaskProcessor(imageView: ImageView, seekBar: SeekBar, private 
 
             }
         })
+    }
+
+    interface OnAfterImageLoaded {
+        fun onLoadedFinished(loadedSuccess: Boolean)
     }
 }
