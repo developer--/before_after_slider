@@ -28,7 +28,7 @@ android {
     }
 
     group = 'com.github.developer--'
-    version = '1.0.2'
+    version = '1.0.3'
 
 }
 task generateSourcesJar(type: Jar) {
@@ -61,10 +61,10 @@ bintray {
         name = 'com.github.developer--'
 
         version {
-            name = '1.0.2'
+            name = '1.0.3'
             desc = 'Before after slider'
             released  = new Date()
-            vcsTag = '1.0.2'
+            vcsTag = '1.0.3'
         }
 
         licenses = ['Apache-2.0']
