@@ -4,7 +4,7 @@
 </p>
 
 <h1> instructions </h1>
-
+<h3>The library uses <b>Glide</b> for image loading</h3>
 ```xml
 <!-- Inside your xml layout -->
 
