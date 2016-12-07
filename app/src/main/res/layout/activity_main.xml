@@ -8,12 +8,12 @@
     tools:context="com.awesomekotlin.beforeafterslider.MainActivity">
 
 
-    <com.github.developer__.Slider
+    <com.github.developer__.BeforeAfterSlider
         android:id="@+id/before_after_slider_id"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         >
 
-    </com.github.developer__.Slider>
+    </com.github.developer__.BeforeAfterSlider>
 
 </LinearLayout>

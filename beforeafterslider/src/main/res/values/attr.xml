@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="Slider">
+    <declare-styleable name="BeforeAfterSlider">
         <attr name="slider_thumb" format="reference"/>
         <attr name="before_image" format="reference"/>
         <attr name="after_image" format="reference"/>

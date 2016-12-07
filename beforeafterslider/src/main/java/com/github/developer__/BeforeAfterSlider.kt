@@ -14,17 +14,17 @@ import kotlinx.android.synthetic.main.slider_layout.view.*
  * Created by Jemo on 12/5/16.
  */
 
-class Slider : RelativeLayout, ClipDrawableProcessorTask.OnAfterImageLoaded{
+class BeforeAfterSlider : RelativeLayout, ClipDrawableProcessorTask.OnAfterImageLoaded{
 
     constructor(context: Context): super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-        val attr = context.theme.obtainStyledAttributes(attrs, R.styleable.Slider,0,0)
+        val attr = context.theme.obtainStyledAttributes(attrs, R.styleable.BeforeAfterSlider,0,0)
         try {
-            val thumbDrawable = attr.getDrawable(R.styleable.Slider_slider_thumb)
+            val thumbDrawable = attr.getDrawable(R.styleable.BeforeAfterSlider_slider_thumb)
 
-            val beforeImage = attr.getDrawable(R.styleable.Slider_before_image)
-            val afterImageUrl = attr.getDrawable(R.styleable.Slider_after_image)
+            val beforeImage = attr.getDrawable(R.styleable.BeforeAfterSlider_before_image)
+            val afterImageUrl = attr.getDrawable(R.styleable.BeforeAfterSlider_after_image)
 
             setSliderThumb(thumbDrawable)
             setBeforeImage(beforeImage)
@@ -41,12 +41,12 @@ class Slider : RelativeLayout, ClipDrawableProcessorTask.OnAfterImageLoaded{
     /**
      * set original image
      */
-    fun setBeforeImage(imageUri: String): Slider {
+    fun setBeforeImage(imageUri: String): BeforeAfterSlider {
         before_image_view_id.loadImage(imageUri)
         return this
     }
 
-    fun setBeforeImage(imgDrawable: Drawable?): Slider {
+    fun setBeforeImage(imgDrawable: Drawable?): BeforeAfterSlider {
         before_image_view_id.loadImage(imgDrawable)
         return this
     }
