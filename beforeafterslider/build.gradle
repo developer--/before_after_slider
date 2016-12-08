@@ -28,50 +28,8 @@ android {
     }
 
     group = 'com.github.developer--'
-    version = '1.0.3'
+    version = '1.0.4'
 
-}
-task generateSourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier 'sources'
-}
-
-task generateJavadocs(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath()
-            .join(File.pathSeparator))
-}
-
-task generateJavadocsJar(type: Jar) {
-    from generateJavadocs.destinationDir
-    classifier 'javadoc'
-}
-
-configurations{
-    artifacts {
-        archives generateJavadocsJar
-        archives generateSourcesJar
-    }
-}
-bintray {
-    pkg {
-        user = 'kandroid'
-        key = '0a25a117b91f313f5174ce9ef7d97883c5ca0a0b'
-        repo = 'maven'
-        name = 'com.github.developer--'
-
-        version {
-            name = '1.0.3'
-            desc = 'Before after slider'
-            released  = new Date()
-            vcsTag = '1.0.3'
-        }
-
-        licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/developer--/before_after_slider.git'
-        websiteUrl = 'https://github.com/developer--/before_after_slider'
-    }
-    configurations = ['archives']
 }
 
 dependencies {
