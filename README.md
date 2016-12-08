@@ -8,13 +8,13 @@
 ```xml
 <!-- Inside your xml layout -->
 
-  <com.github.developer__.BeforeAfterImageView
+  <com.github.developer__.BeforeAfterSlider
         android:id="@+id/mySlider"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:slider_thumb="@mipmap/white_circle" 
         >
-  </com.github.developer__.BeforeAfterImageView>
+  </com.github.developer__.BeforeAfterSlider>
 ```
 
 ```kotlin
