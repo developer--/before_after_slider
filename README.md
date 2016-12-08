@@ -39,12 +39,12 @@
 <dependency>
   <groupId>com.github.developer--</groupId>
   <artifactId>beforeafterslider</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <type>pom</type>
 </dependency>
 ```
 <h1>Gradle dependency</h1>
 
 ```groovy        
-  compile 'com.github.developer--:beforeafterslider:1.0.3'
+  compile 'com.github.developer--:beforeafterslider:1.0.4'
 ```
