@@ -48,3 +48,5 @@
 ```groovy        
   compile 'com.github.developer--:beforeafterslider:1.0.4'
 ```
+
+<h1><a href="https://github.com/ioramashvili/BeforeAfterSlider"> iOS version</a> </h1>
