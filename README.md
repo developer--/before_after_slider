@@ -7,7 +7,6 @@
 <h3>The library uses <b>Glide</b> for image loading</h3>
 ```xml
 <!-- Inside your xml layout -->
-
   <com.github.developer__.BeforeAfterSlider
         android:id="@+id/mySlider"
         android:layout_width="match_parent"
