@@ -6,14 +6,12 @@
 <h1> instructions </h1>
 <h3>The library uses <b>Glide</b> for image loading</h3>
 ```xml
-<!-- Inside your xml layout -->
   <com.github.developer__.BeforeAfterSlider
         android:id="@+id/mySlider"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:slider_thumb="@mipmap/white_circle" 
-        >
-  </com.github.developer__.BeforeAfterSlider>
+        />
 ```
 
 ```kotlin
@@ -33,18 +31,13 @@
   app:after_image="@mipmap/image2"
 ```
 
-<h1>Maven dependency</h1>
-```groovy
-<dependency>
-  <groupId>com.github.developer--</groupId>
-  <artifactId>beforeafterslider</artifactId>
-  <version>1.0.4</version>
-  <type>pom</type>
-</dependency>
-```
 <h1>Gradle dependency</h1>
 
 ```groovy        
+//add this to your top level build.gradle file
+ maven { url 'https://dl.bintray.com/kandroid/maven' }
+ 
+//and add this to your module level build.gradle file
   compile 'com.github.developer--:beforeafterslider:1.0.4'
 ```
 
