@@ -2,10 +2,9 @@
 <p align="center">
   <img src="before-after-slider.gif"/>
 </p>
+The library uses Glide for image loading
 
-<h1> instructions </h1>
-<h3>The library uses <b>Glide</b> for image loading</h3>
-```xml
+```java
   <com.github.developer__.BeforeAfterSlider
         android:id="@+id/mySlider"
         android:layout_width="match_parent"
