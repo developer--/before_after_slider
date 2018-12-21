@@ -4,6 +4,12 @@
 </p>
 The library uses Glide for image loading
 
+---------------------------------------------------------
+
+The image clip retains its last position when screen orientation changes.
+
+---------------------------------------------------------
+
 ```java
   <com.github.developer__.BeforeAfterSlider
         android:id="@+id/mySlider"
