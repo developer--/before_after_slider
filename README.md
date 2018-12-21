@@ -6,7 +6,7 @@ The library uses Glide for image loading
 
 ---------------------------------------------------------
 
-The image clip retains its last position when screen orientation changes.
+Fix: The image clip retains its last position when screen orientation changes.
 
 ---------------------------------------------------------
 
