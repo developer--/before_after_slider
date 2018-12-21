@@ -4,6 +4,12 @@
 </p>
 The library uses Glide for image loading
 
+---------------------------------------------------------
+
+Fix: The image clip retains its last position when screen orientation changes.
+
+---------------------------------------------------------
+
 ```java
   <com.github.developer__.BeforeAfterSlider
         android:id="@+id/mySlider"
@@ -33,11 +39,19 @@ The library uses Glide for image loading
 <h1>Gradle dependency</h1>
 
 ```groovy        
+//ORIGINAL
 //add this to your top level build.gradle file
  maven { url 'https://dl.bintray.com/kandroid/maven' }
  
 //and add this to your module level build.gradle file
   compile 'com.github.developer--:beforeafterslider:1.0.4'
+  
+//MY VERSION
+//add this to your top level build.gradle file
+  maven { url 'https://jitpack.io' }
+      
+//and add this to your module level build.gradle file
+  implementation 'com.github.blackfox94:before_after_slider:701e3d5861'
 ```
 
 <h1><a href="https://github.com/ioramashvili/BeforeAfterSlider"> iOS version</a> </h1>

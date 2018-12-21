@@ -30,7 +30,7 @@ class ClipDrawableProcessorTask<T>(imageView: ImageView, seekBar: SeekBar, priva
     override fun doInBackground(vararg args: T): ClipDrawable? {
         Looper.myLooper()?.let { Looper.prepare() }
         try {
-            var theBitmap : Bitmap
+            var theBitmap: Bitmap
             if (args[0] is String) {
                 theBitmap = Glide.with(context)
                         .load(args[0])
@@ -74,13 +74,16 @@ class ClipDrawableProcessorTask<T>(imageView: ImageView, seekBar: SeekBar, priva
             if (clipDrawable != null) {
                 initSeekBar(clipDrawable)
                 imageRef.get().setImageDrawable(clipDrawable)
-                val progressNum = 5000
-                clipDrawable.level = progressNum
+                if (clipDrawable.level != 0) {
+                    val progressNum = 5000
+                    clipDrawable.level = progressNum
+                } else
+                    clipDrawable.level = seekBarRef.get().progress
                 loadedFinishedListener?.onLoadedFinished(true)
-            }else {
+            } else {
                 loadedFinishedListener?.onLoadedFinished(false)
             }
-        }else {
+        } else {
             loadedFinishedListener?.onLoadedFinished(false)
         }
     }
