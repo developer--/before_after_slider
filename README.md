@@ -49,5 +49,6 @@ Fix: The image clip retains its last position when screen orientation changes.
 //MY VERSION
 //add this to your top level build.gradle file
   maven { url 'https://jitpack.io' }
+```
 
 <h1><a href="https://github.com/ioramashvili/BeforeAfterSlider"> iOS version</a> </h1>
